@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas del Usuario</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza a tu archivo CSS -->
+    <style>
+        /* Estilos básicos para la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nota-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            background: #f9f9f9;
+        }
+        .nota-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notas del Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="#subir-nota">Subir Nota</a></li>
+                <li><a href="#notas">Ver Notas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="subir-nota">
+            <h2>Subir Nueva Nota</h2>
+            <form id="nota-form">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="contenido">Contenido:</label>
+                <textarea id="contenido" name="contenido" rows="4" required></textarea>
+
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+
+                <button type="submit">Subir Nota</button>
+            </form>
+        </section>
+
+        <section id="notas">
+            <h2>Notas Subidas</h2>
+            <div id="lista-notas">
+                <div class="nota-card">
+                    <h3>Título de la Nota 1</h3>
+                    <p>Contenido de la nota 1. Aquí puedes incluir información relevante sobre el tema.</p>
+                    <img src="ruta/a/la/imagen1.jpg" alt="Descripción de la imagen 1">
+                </div>
+                <div class="nota-card">
+                    <h3>Título de la Nota 2</h3>
+                    <p>Contenido de la nota 2. Aquí puedes incluir información relevante sobre el tema.</p>
+                    <img src="ruta/a/la/imagen2.jpg" alt="Descripción de la imagen 2">
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

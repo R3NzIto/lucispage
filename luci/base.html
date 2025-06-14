@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza a tu archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Notas del Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="#subir-nota">Subir Nota</a></li>
+                <li><a href="#notas">Ver Notas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="subir-nota">
+            <h2>Subir Nueva Nota</h2>
+            <form id="nota-form">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="contenido">Contenido:</label>
+                <textarea id="contenido" name="contenido" rows="4" required></textarea>
+
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+
+                <button type="submit">Subir Nota</button>
+            </form>
+        </section>
+
+        <section id="notas">
+            <h2>Notas Subidas</h2>
+            <div id="lista-notas">
+                <!-- Aquí se mostrarán las notas subidas -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Enlaza a tu archivo JavaScript -->
+</body>
+</html>
